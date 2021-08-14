@@ -1,4 +1,28 @@
-<div class="container-fluid">
+<% @team_number.times do %>
+
+  <% @bg = rand(1..2) %> 
+  <% @random = rand(1..1000) %>
+  <%  @set_number = rand(1..4) %>
+  
+  <%  if @set_number == 1 %>
+    <%  @set = "set1" %>
+    <% elsif @set_number == 2 %>
+    <%   @set = "set2" %>
+    <% elsif @set_number == 3 %>
+      <% @set = "set3" %>
+    <% else %>
+      <% @set = "set4" %>
+    <% end %>
+    
+    <% if @bg == 1 %>
+      <% @background = "bg1" %>
+    <% else %>
+      <% @background = "bg2" %>
+    <% end %>
+
+    <% @avatar = Faker::Avatar.image(slug: @random, size: "300x300", format: "png", set: @set, bgset: @background) %>
+    
+  <div class="container-fluid">
   <img src="<%= @avatar %>"
     /div>
 
@@ -23,9 +47,7 @@
     <a><%= link_to 'Generate another superhero', root_path, class:"btn btn-primary" %> </a>
   </div>
   
-</div>
+</div> 
 
+<% end %>
 
-
-<% link_to 'Generate another superhero', root_path %>
-<% link_to 'Create a team', home_team_path %>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>superhero name generator</title>
+    <title>Superhero Generator</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -13,6 +13,12 @@
   <body>
     <%= render 'home/navbar' %>
 
+
+  <div class="container-fluid">
     <%= yield %>
+  </div>
+
+    <center>Copyright © Jordan Fox - All Rights Reserved</center>
+
   </body>
 </html>

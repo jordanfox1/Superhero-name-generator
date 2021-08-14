@@ -1,2 +1,22 @@
-<%= link_to 'Home', root_path %>
-<%= link_to 'Create a team', home_team_path %>
+<% link_to 'Home', root_path %>
+<% link_to 'Create a team', home_team_path %>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+     <%= link_to 'Superhero Generator', root_path, class: "navbar-brand" %> 
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item col-5 mx-auto">
+        <%= link_to 'Create a new superhero', root_path, class: "nav-link", class: "btn btn-info" %> 
+        </li> 
+        <li class="nav-item col-5 mx-auto">
+        <%= link_to 'Create a team of superheroes ', home_team_path, class: "nav-link", class: "btn btn-info " %> 
+        </li>
+        
+       
+      </ul>
+      
+    </div>
+  </div>
+</nav>
